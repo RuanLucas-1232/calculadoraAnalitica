@@ -5,6 +5,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./estilos/home/estilos.css">
+    <script src="./scipts/index.js"></script>
+    <style>
+        @media screen and (max-width: 360px) {
+            .form-flex {
+                display: flex;
+                justify-content: space-around;
+                height: 11rem;
+                margin: 10%;
+                flex-direction: column;
+                margin-top: 9rem;
+            }
+
+            .form-flex p {
+                border: 1px solid black;
+                border-radius: 6px;
+                padding: 4rem;
+                /* margin: 2rem; */
+                margin-left: 0rem;
+                width: 18rem;
+                text-align: center;
+                color: #737171;
+                font-size: 23px;
+            }
+
+            .section-flex {
+                display: flex;
+                justify-content: space-between;
+                flex-flow: wrap;
+                width: 18rem;
+                margin-left: 0rem;
+                margin-top: 32px;
+            }
+
+            .section-flex input {
+                width: 34%;
+                margin-top: 1rem;
+                padding: 12px;
+                border-radius: 6px;
+                border-color: black;
+            }
+
+            header nav {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 51%;
+                margin-right: 1%;
+            }
+
+            header a {
+                color: white;
+                font-size: 12px;
+                text-decoration: none;
+                font-family: 'Roboto-Regular';
+            }
+        }
+
+        /* 
+        @media screen and (max-width: ) {
+            
+        } */
+    </style>
+
     <title>Calculadora Analítica</title>
 </head>
 
@@ -24,15 +87,15 @@
     </header>
 
     <main>
-        <div class="containner-grid flex-main">
+        <div class="containner-grid">
             <form class="form-flex">
                 <p id="resultado">Resultado</p>
                 <section class="section-flex">
                     <input type="number" name="Brix1" id="Bx1" onkeyup="CalcularBrix()" placeholder="Brix1">
-                    <input type="number" name="Volume1" id="V1" onkeyup="CalcularBrix()"  placeholder="Volume1">
-                    <input type="number" name="Brix2" id="Bx2" onkeyup="CalcularBrix()"  placeholder="Brix2">
-                    <input type="number" name="Volume2" id="V2" onkeyup="CalcularBrix()"  placeholder="Volume2">
-                    <input type="number" name="Volume3" id="V3" onkeyup="CalcularBrix()"  placeholder="Volume3">
+                    <input type="number" name="Volume1" id="V1" onkeyup="CalcularBrix()" placeholder="Volume1">
+                    <input type="number" name="Brix2" id="Bx2" onkeyup="CalcularBrix()" placeholder="Brix2">
+                    <input type="number" name="Volume2" id="V2" onkeyup="CalcularBrix()" placeholder="Volume2">
+                    <input type="number" name="Volume3" id="V3" onkeyup="CalcularBrix()" placeholder="Volume3">
                 </section>
             </form>
 
@@ -50,7 +113,7 @@
             var V2 = document.querySelector("#V2").value;
             var V3 = document.querySelector("#V3").value;
             var Bx3;
-            
+
             //processa
             Bx3 = ((Bx1 * V1) + (Bx2 * V2)) / V3
 
