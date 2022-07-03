@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./estilos/estilos.css">
+    <link rel="stylesheet" href="./estilos/home/estilos.css">
     <title>Calculadora Analítica</title>
 </head>
 
@@ -15,10 +15,10 @@
                 alt="Calculadora Analítica">
 
             <nav class="nav-flex">
-                <a href="#">Seções</a>
-                <a href="#">Intruções</a>
-                <a href="#">Contato</a>
-                <a href="#">Ajude-nos</a>
+                <a href="./paginas/Secoes.html">Seções</a>
+                <a href="./paginas/Instrucoes.html">Intruções</a>
+                <a href="./paginas/Contato.html">Contato</a>
+                <a href="./paginas/AjudeNos.html">Ajude-nos</a>
             </nav>
         </div>
     </header>
@@ -55,7 +55,7 @@
             Bx3 = ((Bx1 * V1) + (Bx2 * V2)) / V3
 
             //verifica
-            if (Bx3 == null || Bx3 == NaN || Bx3 == Infinity) {
+            if (Bx3 == null || Bx3 == NaN || Bx3 == Infinity || V2 == null) {
                 document.querySelector("#resultado").innerHTML = 0;
             }
             else {
