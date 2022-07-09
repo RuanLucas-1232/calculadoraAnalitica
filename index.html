@@ -7,23 +7,23 @@
     <link rel="stylesheet" href="./estilos/home/estilos.css">
     <script src="./scipts/index.js"></script>
     <style>
-        @media screen and (max-width: 360px) {
+        @media screen and (max-width: 320px) {
+            .header-flex>.nav-flex {
+                display: none;
+            }
+
             .form-flex {
                 display: flex;
-                justify-content: space-around;
-                height: 11rem;
-                margin: 10%;
                 flex-direction: column;
-                margin-top: 9rem;
+                margin-top: 60px;
             }
 
             .form-flex p {
                 border: 1px solid black;
                 border-radius: 6px;
                 padding: 4rem;
-                /* margin: 2rem; */
-                margin-left: 0rem;
-                width: 18rem;
+                margin: 0 auto;
+                width: 100%;
                 text-align: center;
                 color: #737171;
                 font-size: 23px;
@@ -31,53 +31,80 @@
 
             .section-flex {
                 display: flex;
-                justify-content: space-between;
                 flex-flow: wrap;
-                width: 18rem;
-                margin-left: 0rem;
-                margin-top: 32px;
+                justify-content: space-between;
+                width: 100%;
+                margin: 0 auto;
             }
 
             .section-flex input {
-                width: 34%;
+                margin-top: 1rem;
+                padding: 12px;
+                width: 40%;
+                border-radius: 6px;
+                border-color: black;
+            }
+        }
+
+        /* @media (max-width: 768px) {
+            representa a mesma midea usada aqui
+        } */
+        @media screen and (max-width: 480px) {
+            .header-flex>.nav-flex {
+                display: none;
+            }
+
+            .form-flex {
+                display: flex;
+                flex-direction: column;
+                margin-top: 60px;
+            }
+
+            .form-flex p {
+                border: 1px solid black;
+                border-radius: 6px;
+                padding: 4rem;
+                margin: 0 auto;
+                width: 100%;
+                text-align: center;
+                color: #737171;
+                font-size: 23px;
+            }
+
+            .section-flex {
+                display: flex;
+                flex-flow: wrap;
+                justify-content: space-between;
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            .section-flex input {
                 margin-top: 1rem;
                 padding: 12px;
                 border-radius: 6px;
                 border-color: black;
-            }
-
-            header nav {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                width: 51%;
-                margin-right: 1%;
-            }
-
-            header a {
-                color: white;
-                font-size: 12px;
-                text-decoration: none;
-                font-family: 'Roboto-Regular';
+                width: 40%;
             }
         }
 
-        /* 
-        @media screen and (max-width: ) {
-            
-        } */
+        @media screen and (max-width: 768px) {
+            .header-flex>.nav-flex {
+                display: none;
+            }
+        }
     </style>
 
     <title>Calculadora Analítica</title>
 </head>
 
-<body>
+<body onresize="AlternarMenu()">
     <header>
         <div class="containner-grid header-flex">
             <img src="./imagens/Logo Para Site Calculadora Analítica.svg" title="Logo Calculadora Analítica"
                 alt="Calculadora Analítica">
 
-            <nav class="nav-flex">
+            <nav class="nav-flex" id="menu">
                 <a href="./paginas/Secoes.html">Seções</a>
                 <a href="./paginas/Instrucoes.html">Intruções</a>
                 <a href="./paginas/Contato.html">Contato</a>
@@ -126,6 +153,14 @@
                 document.querySelector("#resultado").innerHTML = Bx3;
             }
         }
+
+        function AlternarMenu() {
+            if (matchMedia("(max-width: 360px") <= 360) {
+                var menu = document.getElementById("menu");
+                menu.classList.toggle("menu-alternado")
+            }
+        }
+
     </script>
 </body>
 

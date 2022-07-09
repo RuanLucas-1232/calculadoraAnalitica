@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@keyframes animacao{
+    from{background-color: blue;width: 0%;}
+    to{background-color: rgba(0, 0, 255, 0.000);width: 50%;}
+}
+
+#box-1{
+    height: 500px;
+    animation-name: animacao;
+    animation-duration: 10s;
+}
