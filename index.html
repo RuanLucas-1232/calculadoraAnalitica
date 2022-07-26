@@ -120,9 +120,9 @@
                 <section class="section-flex">
                     <input type="number" name="Brix1" id="Bx1" onkeyup="CalcularBrix()" placeholder="Brix1">
                     <input type="number" name="Volume1" id="V1" onkeyup="CalcularBrix()" placeholder="Volume1">
-                    <input type="number" name="Brix2" id="Bx2" onkeyup="CalcularBrix()" placeholder="Brix2">
-                    <input type="number" name="Volume2" id="V2" onkeyup="CalcularBrix()" placeholder="Volume2">
+                    <input type="number" name="Brix3" id="Bx3" onkeyup="CalcularBrix()" placeholder="Brix3">
                     <input type="number" name="Volume3" id="V3" onkeyup="CalcularBrix()" placeholder="Volume3">
+                    <input type="number" name="Volume2" id="V2" onkeyup="CalcularBrix()" placeholder="Volume2">
                 </section>
             </form>
 
@@ -136,21 +136,21 @@
             //coleta dados
             var Bx1 = document.querySelector("#Bx1").value;
             var V1 = document.querySelector("#V1").value;
-            var Bx2 = document.querySelector("#Bx2").value;
-            var V2 = document.querySelector("#V2").value;
+            var Bx3 = document.querySelector("#Bx3").value;
             var V3 = document.querySelector("#V3").value;
-            var Bx3;
+            var V2 = document.querySelector("#V2").value;
+            var Bx2;
 
             //processa
-            Bx3 = ((Bx1 * V1) + (Bx2 * V2)) / V3
+            Bx2 = ((Bx1 * V1) + (Bx2 * V2)) / V3
 
             //verifica
-            if (Bx3 == null || Bx3 == NaN || Bx3 == Infinity || V2 == null) {
+            if (Bx2 == null || Bx2 == NaN || Bx2 == Infinity || V3 == null) {
                 document.querySelector("#resultado").innerHTML = 0;
             }
             else {
                 //devolve
-                document.querySelector("#resultado").innerHTML = Bx3;
+                document.querySelector("#resultado").innerHTML = Bx2;
             }
         }
 
